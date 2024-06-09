@@ -13,9 +13,9 @@ async def main():
     image_limit = int(input("please enter a number for maximum number of images to be fetched: "))
     resize_dimensions = (100, 100)
 
-    db_user = input("Enter PostgreSQL username: ")
-    db_password = input("Enter PostgreSQL password: ")
-    db_name = input("Enter PostgreSQL database name: ")
+    db_user = input("Enter PostgreSQL username(default 'user2'): ") or 'user2'
+    db_password = input("Enter PostgreSQL password(default 'password'): ") or 'password'
+    db_name = input("Enter PostgreSQL database name(default 'images_db'): ") or 'images_db'
     db_host = input("Enter PostgreSQL host (default '127.0.0.1'): ") or '127.0.0.1'
     db_port = input("Enter PostgreSQL port (default '5433'): ") or 5433
 

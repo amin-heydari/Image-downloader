@@ -2,7 +2,7 @@ import asyncpg
 import asyncio
 
 
-async def connect_db(user, password, database, host='127.0.0.1', port=5433):
+async def connect_db(user='user2', password='password', database='images_db', host='127.0.0.1', port=5433):
     conn = await asyncpg.connect(user=user, password=password, database=database, host=host, port=port)
     return conn
 
